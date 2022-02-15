@@ -1,6 +1,7 @@
 i
 =
-personal website/gemini capsule
+personal website/gemini capsule designed to work locally without any
+webserver.
 
 * Website:        <https://usernamesystems.xyz>
 * Gemini Capsule: <gemini://usernamesystems.xyz> (does not exist yet)
