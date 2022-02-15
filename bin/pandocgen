@@ -1,1 +1,15 @@
 #!/bin/sh
+#
+# pandocgen - recursively traverse directories and convert any markdown
+# files into html with pandoc
+#
+# DEPENDENCIES
+# - pandoc
+# - find
+
+main() {
+	printf 'Hello world\n'
+	printf 'WIP\n'
+}
+
+main "$@"
