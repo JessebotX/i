@@ -1,0 +1,19 @@
+/**
+ * Copyright (c) 2022 Jesse
+ *
+ * See COPYING.txt
+ **/
+
+body {
+  background: black;
+  color: white;
+  font-family: sans-serif;
+  margin: 1rem auto;
+  max-width: 55rem;
+}
+
+@media (max-width: 55rem) {
+  body {
+    margin: 1rem;
+  }
+}
