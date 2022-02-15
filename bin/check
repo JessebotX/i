@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# check - use shellcheck to validate scripts
+#
+# DEPENDENCIES
+# - shellcheck
+
+for i in "${PWD}"/bin/*; do
+	shellcheck "${i}"
+done
