@@ -7,9 +7,21 @@
 # - pandoc
 # - find
 
+defaultifs=${IFS}
+
 main() {
-	printf 'Hello world\n'
-	printf 'WIP\n'
+	# Usage: main "$@"
+	# Program's entry point
+
+	IFS=$(printf '\n\b')
+
+	# This is fine because IFS is set properly
+	# shellcheck disable=SC2044
+	for i in $(find "${1:-.}"); do
+		printf '%s\n' "${i}"
+	done
+
+	IFS=${defaultifs}
 }
 
 main "$@"
