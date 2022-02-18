@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# note: remove trailing slashes
+indir="src"
+outdir="pub"
+
+defaultifs=${IFS}
+
+# cleanup
+rm -rf "${outdir}"
+mkdir -p "${outdir}"
+
+# Generate html using pandoc
+IFS=$(printf '\n\b')
+# shellcheck disable=SC2044 # fixed problem by setting IFS above
+for i in $(find "${indir}" -name '*.md'); do
+	outfname="${outdir}/$(basename "${i%.md}.html")"
+
+	pandoc -f markdown -t html \
+		--template="tpl/template.html" \
+		--lua-filter="tpl/links-to-html.lua" \
+		"${i}" -o "${outfname}"
+done
+
+IFS=${defaultifs}
+
+cp -r "${indir}/assets" "${outdir}"
