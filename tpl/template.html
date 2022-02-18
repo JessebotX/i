@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0">
+
+    $if(desc)$
+      <meta name="description" content=$desc$>
+      <meta property="og:description" content=$desc$" />
+    $endif$
+
+    $if(author)$
+      <meta name="author" content=$author$>
+    $endif$
+
+    <meta property="og:title" content=$title$ />
+
+    $if(img)$
+      <meta property="og:image" content=$img$>
+    $endif$
+
+    $if(css)$
+      <link rel="stylesheet" type="text/css" href=$css$>
+    $else$
+      <link rel="stylesheet" type="text/css" href=assets/css/styles.css>
+    $endif$
+
+    <title>$title$</title>
+  </head>
+  <body>
+    <!-- BODY -->
+    <header>
+      <nav>
+        <li><a href="..">Back up</a></li>
+      </nav>
+    </header>
+
+    $body$
+  </body>
+</html>

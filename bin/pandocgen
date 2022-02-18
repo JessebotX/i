@@ -17,8 +17,10 @@ main() {
 
 	# This is fine because IFS is set properly
 	# shellcheck disable=SC2044
-	for i in $(find "${1:-.}"); do
-		printf '%s\n' "${i}"
+	for i in $(find "${1:-.}" -name "*.md"); do
+		pandoc -f markdown -t html \
+			--template="tpl/template.html" \
+			"${i}" -o "${i%.md}.html"
 	done
 
 	IFS=${defaultifs}
