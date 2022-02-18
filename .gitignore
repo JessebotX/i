@@ -1,1 +1,3 @@
 pub
+src/*.html
+src/**/*.html
