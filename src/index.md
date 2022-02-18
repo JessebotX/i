@@ -32,8 +32,8 @@ For more projects, see [/dev](./dev/index.md)
 Network
 -------
 * [/home](./home/index.md) is the page you're on right now
-* [/dev](./dev/index.md) to see my list of projects
-* [/vid](./vid/index.md) to see my repository of videos
+* [/dev](./dev/index.md) for a list of my projects
+* [/vid](./vid/index.md) is a repository of my videos
 * [/log](./log/index.md) to see my blog (if I ever blog)
 * [/src](./src/index.md) to see my development/source code repositories
   (git, hg, etc.)
