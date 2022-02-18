@@ -38,7 +38,7 @@ For more projects, see [/dev](./dev/index.md)
 ## Donate
 See [/donate](./donate/index.md) for more information
 
-* Bitcoin [(QR)](./assets/images/donate/bitcoin.png)
+* Bitcoin [(QR)](./assets/images/donate/bitcoin.png):
     ```
     bc1qq9fjkzug8nkzgk07k85a8av4pvjlv4mvk7dw3f
     ```
