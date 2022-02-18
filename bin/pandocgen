@@ -15,12 +15,18 @@ main() {
 
 	IFS=$(printf '\n\b')
 
+	inputdir="${1:-.}"
+	outputdir="${2:-${inputdir}}"
+
 	# This is fine because IFS is set properly
 	# shellcheck disable=SC2044
-	for i in $(find "${1:-.}" -name "*.md"); do
+	for i in $(find "${inputdir}" -name "*.md"); do
+		base=$(basename "${i%.md}.html")
+
 		pandoc -f markdown -t html \
 			--template="tpl/template.html" \
-			"${i}" -o "${i%.md}.html"
+			--lua-filter="tpl/links-to-html.lua" \
+			"${i}" -o "${outputdir}/${base}"
 	done
 
 	IFS=${defaultifs}
