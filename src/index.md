@@ -4,7 +4,11 @@ desc: epic
 author: iii...iii
 ---
 
-## Hello there...
+iii...iii
+=========
+
+Hello there...
+--------------
 Brief Project Showcase:
 
 * **Stardew Valley Mods**: A monorepo of 20+ mods for Stardew Valley,
@@ -22,7 +26,8 @@ Brief Project Showcase:
 
 For more projects, see [/dev](./dev/index.md)
 
-## Network
+Network
+-------
 * [/home](./home/index.md) is the page you're on right now
 * [/dev](./dev/index.md) to see my list of projects
 * [/vid](./vid/index.md) to see my repository of videos
@@ -35,7 +40,8 @@ For more projects, see [/dev](./dev/index.md)
 * [/donate](./donate/index.md) to find ways to donate to me
 * [/data](./data/index.md) for the data hoarders
 
-## Donate
+Donate
+------
 See [/donate](./donate/index.md) for more information
 
 * Bitcoin [(QR)](./assets/images/donate/bitcoin.png):
