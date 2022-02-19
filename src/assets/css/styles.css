@@ -4,36 +4,36 @@
  * See COPYING.txt
  **/
 body {
-  background: black;
-  color: white;
-  font-family: sans-serif;
-  margin: 1rem auto;
-  max-width: 55rem;
+	background: black;
+	color: white;
+	font-family: sans-serif;
+	margin: 1rem auto;
+	max-width: 55rem;
 }
 
 code {
-  white-space: pre-wrap;
-  word-break: break-all;
+	white-space: pre-wrap;
+	word-break: break-all;
 }
 
 a {
-  color: #0080ff;
+	color: #0080ff;
 }
 
 a:hover {
-  background: #0080ff;
-  color: white;
-  text-decoration: none;
+	background: #0080ff;
+	color: white;
+	text-decoration: none;
 }
 
 a:visited:hover {
-  background: blue;
-  color: white;
-  text-decoration: none;
+	background: blue;
+	color: white;
+	text-decoration: none;
 }
 
 @media (max-width: 56rem) {
-  body {
-    margin: 1rem;
-  }
+	body {
+		margin: 1rem;
+	}
 }
