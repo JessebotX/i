@@ -6,22 +6,37 @@ outdir="pub"
 
 defaultifs=${IFS}
 
-# cleanup
-rm -rf "${outdir}"
-mkdir -p "${outdir}"
+main() {
+	# Script Entry point
+	cleanup
+	genhtml
+	addother
+}
 
-# Generate html using pandoc
-IFS=$(printf '\n\b')
-# shellcheck disable=SC2044 # fixed problem by setting IFS above
-for i in $(find "${indir}" -name '*.md'); do
-	outfname="${outdir}/$(basename "${i%.md}.html")"
+cleanup() {
+	# cleanup
+	rm -rf "${outdir}"
+	mkdir -p "${outdir}"
+}
 
-	pandoc -f markdown -t html \
-		--template="tpl/template.html" \
-		--lua-filter="tpl/links-to-html.lua" \
-		"${i}" -o "${outfname}"
-done
+genhtml() {
+	# Generate html using pandoc
+	IFS=$(printf '\n\b')
+	# shellcheck disable=SC2044 # fixed problem by setting IFS above
+	for i in $(find "${indir}" -name '*.md'); do
+		outfname="${outdir}/$(basename "${i%.md}.html")"
 
-IFS=${defaultifs}
+		pandoc -f markdown -t html \
+			--template="tpl/template.html" \
+			--lua-filter="tpl/links-to-html.lua" \
+			"${i}" -o "${outfname}"
+	done
 
-cp -r "${indir}/assets" "${outdir}"
+	IFS=${defaultifs}
+}
+
+addother() {
+	cp -r "${indir}/assets" "${outdir}"
+}
+
+main "$@"
