@@ -37,7 +37,7 @@ Network
 * [/log](./log/index.md) to see my blog (if I ever blog)
 * [/src](./src/index.md) to see my development/source code repositories
   (git, hg, etc.)
-* [/misc](./misc/index.md) stores a bunch of miscellaneous documents
+* [/doc](./doc/index.md) stores a bunch of miscellaneous documents
 * [/about](./about/index.md) to see my "bio" or find a way to get in
   contact with me
 * [/donate](./donate/index.md) to find ways to donate to me
