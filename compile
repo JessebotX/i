@@ -33,6 +33,7 @@ genhtml() {
 		pandoc -f markdown -t html \
 			--template="tpl/template.html" \
 			--lua-filter="tpl/links-to-html.lua" \
+			--toc \
 			"${i}" -o "${outfname}"
 	done
 
