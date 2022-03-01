@@ -2,6 +2,7 @@
 title: Donate | iii...iii
 desc: buy me a coffee.
 author: iii...iii
+css: ../assets/css/styles.css
 ---
 
 Donate
