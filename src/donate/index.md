@@ -5,8 +5,6 @@ author: iii...iii
 css: ../assets/css/styles.css
 ---
 
-Donate
-======
 Support my work in the following ways...
 
 Bitcoin

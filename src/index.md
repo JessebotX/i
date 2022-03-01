@@ -4,9 +4,6 @@ desc: epic
 author: iii...iii
 ---
 
-iii...iii
-=========
-
 THIS IS A WIP WEBSITE
 =====================
 
