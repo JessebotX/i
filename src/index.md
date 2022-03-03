@@ -32,4 +32,4 @@ Network
 * [/donate](./donate/index.md) to find ways to donate to me
 * [/data](./data/index.md) for the data hoarders
 
-> Support my work? See [/donate](./donate/index.md)
+Support my work? See [/donate](./donate/index.md)
