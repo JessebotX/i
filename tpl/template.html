@@ -31,9 +31,14 @@
   <body>
     <!-- BODY -->
     <header>
+      $if(noback)$
+
+      $else$
       <nav>
         <li><a href="../index.html">Back up</a></li>
       </nav>
+      $endif$
+
       <h1>$title$</h1>
     </header>
     $body$
