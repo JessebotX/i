@@ -2,4 +2,4 @@ build:
 	./compile
 
 upload:
-	rsync -rtvzP pub/ root@usernamesystems.xyz:/var/www/usernamesystems.xyz
+	rsync -rtvzP pub/ web@usernamesystems.xyz:/var/www/website
