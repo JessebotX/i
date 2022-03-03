@@ -10,10 +10,12 @@ Recommended Projects
 --------------------
 * [Stardew Valley Mods](./dev/stardew-valley-mods.html): A monorepo of
   20+ mods for Stardew Valley
-* [gitpg](./dev/gitpg.html): a lightweight and portable static git page generator
-* [nt](./dev/nt.html): versatile, extensible and portable notetaking system
-* [bin](./dev/bin.html): collection of shell scripts to manage a unix-based
-  system/workflow
+* [gitpg](./dev/gitpg.html): a lightweight and portable static git page
+  generator
+* [nt](./dev/nt.html): versatile, extensible and portable notetaking
+  system
+* [bin](./dev/bin.html): collection of shell scripts to manage a
+  unix-based system/workflow
 * [home](./dev/home.html): extremely portable dotfile/home dir manager
 
 See [/dev](./dev/index.md) for more projects.
