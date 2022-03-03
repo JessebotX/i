@@ -39,14 +39,18 @@ a {
 }
 
 a:hover {
-	background: #0080ff;
-	color: white;
+	background: #b8bb26;
+	color: black;
 	text-decoration: none;
 }
 
+a:visited {
+	color: #98971a;
+}
+
 a:visited:hover {
-	background: blue;
-	color: white;
+	background: #98971a;
+	color: black;
 	text-decoration: none;
 }
 
