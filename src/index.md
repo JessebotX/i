@@ -4,27 +4,19 @@ desc: epic
 author: iii...iii
 ---
 
-THIS IS A WIP WEBSITE
-=====================
+Hello...
 
-Hello there...
---------------
-Brief Project Showcase:
-
-* **Stardew Valley Mods**: A monorepo of 20+ mods for Stardew Valley,
-  including but not limited to Health and Stamina Regeneration, Sprint
-  Sprint, etc.
-* **nt**: an advanced notetaking system based on the zettelkasten method
-  and written in POSIX shell.
-* **webg**: a collection of scripts that create a powerful static site
-  generator
-* **bin**: collection of shell scripts to manage a unix-based
+Recommended Projects
+--------------------
+* [Stardew Valley Mods](./dev/stardew-valley-mods.html): A monorepo of
+  20+ mods for Stardew Valley
+* [gitpg](./dev/gitpg.html): a lightweight and portable static git page generator
+* [nt](./dev/nt.html): versatile, extensible and portable notetaking system
+* [bin](./dev/bin.html): collection of shell scripts to manage a unix-based
   system/workflow
-* **gitpg**: a lightweight and portable static git page generator
-* **home**: extremely portable and flexible POSIX shell
-  script to manage your home directory
+* [home](./dev/home.html): extremely portable dotfile/home dir manager
 
-For more projects, see [/dev](./dev/index.md)
+See [/dev](./dev/index.md) for more projects.
 
 Network
 -------
@@ -40,19 +32,4 @@ Network
 * [/donate](./donate/index.md) to find ways to donate to me
 * [/data](./data/index.md) for the data hoarders
 
-Donate
-------
-See [/donate](./donate/index.md) for more information
-
-* Bitcoin [(QR)](./assets/images/donate/bitcoin.png):
-    ```
-    bc1qq9fjkzug8nkzgk07k85a8av4pvjlv4mvk7dw3f
-    ```
-
-* Monero [(QR)](./assets/images/donate/monero.png):
-    ```
-    48zJXWzVPiEJKY3WpXZXBL19Xxc6gP91j3FxujtJFnHLTEfjjaMkiKzQaQvKq3zEEgZSi1YJMJcpRYC53DG5Nu31D2uBK9A
-    ```
-
-* Other: See [/donate](./donate/index.md)
-
+> Support my work? See [/donate](./donate/index.md)

@@ -4,11 +4,28 @@
  * See COPYING.txt
  **/
 body {
-	background: black;
-	color: white;
+	background: #1d2021;
+	color: #fbf1c7;
 	font-family: sans-serif;
-	margin: 1rem auto;
-	max-width: 55rem;
+	margin: 7% auto auto;
+	padding: 0 5%;
+	max-width: 40rem;
+}
+
+h1 {
+	font-size: 1.75rem;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: #fb4934;
+}
+
+h2 {
+	font-size: 1.1rem;
+}
+
+ol,ul {
+	padding-left: 1rem;
 }
 
 code {
@@ -17,7 +34,8 @@ code {
 }
 
 a {
-	color: #0080ff;
+	color: #b8bb26;
+	font-weight: bold;
 }
 
 a:hover {
