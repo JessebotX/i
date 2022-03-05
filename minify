@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# https://github.com/dylanaraps/pure-sh-bible#trim-leading-and-trailing-white-space-from-string
+trim_string() {
+	# Usage: trim_string "   example   string    "
+	# Trim trailing and leading whitespace
+
+	trim=${1#${1%%[![:space:]]*}}
+	trim=${trim%${trim##*[![:space:]]}}
+
+	printf '%s\n' "${trim}"
+}
+
+err() {
+	printf 'error: %s\n' "${1:-"something unexpected happened."}"
+	exit 1
+}
+
+file=${1}
+output=${2}
+
+[ -z "${file}" ] && err "missing file path argument."
+[ -z "${output}" ] && err "missing output file path argument."
+
+minified=
+
+while IFS= read -r line; do
+	minified="${minified}$(printf '%s' "$(trim_string "${line}")")"
+done < "${file}"
+
+printf '%s\n' "${minified}" > "${output}"
+
