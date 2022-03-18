@@ -1,0 +1,9 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+	background: #1d2021;
+	color: #ebdbb2;
+	margin: 7% auto auto;
+	max-width: 55rem;
+	padding: 0 5%;
+}
