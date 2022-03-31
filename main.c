@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <unistd.h>
 
 #define TITLE_MAX 255
 
@@ -9,7 +10,10 @@ void error(char *fmt, ...);
 int main(void)
 {
 	int exitcode = 1;
-	error("[%i] Nothing has been implemented yet.", exitcode);
+	char *argv[] = { "echo", "Hello World" };
+
+	execvp(argv[0], argv);
+
 	return 0;
 }
 
