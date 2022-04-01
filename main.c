@@ -3,16 +3,29 @@
 #include <stdarg.h>
 #include <unistd.h>
 
+#define MOD_DIR   0777
 #define TITLE_MAX 255
 
 void error(char *fmt, ...);
 
-int main(void)
+int main(int argc, char *argv[])
 {
-	int exitcode = 1;
-	char *argv[] = { "echo", "Hello World" };
+	char *input = "src";
+	char *output_html = "pub";
+	char *output_gem = "gem";
+	char *converter[] = {
+		"pandoc", "-f", "markdown", "-t", "html", "./src/index.md", "-o", "./pub/index.html", NULL
+	};
 
-	execvp(argv[0], argv);
+	/**
+	 * Ensure necessary directories exist.
+	 */
+	if (mkdir(output_html, MOD_DIR) != 0)
+	{
+		error("Failed to create %s. Make sure its parent dirname exists.", output_html);
+	}
+
+	execvp(converter[0], converter);
 
 	return 0;
 }
