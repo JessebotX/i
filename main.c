@@ -18,7 +18,9 @@ int main(void)
 }
 
 /**
- * Error out and exit program
+ * Error out and exit program.
+ *
+ * A new line is inserted at the end.
  *
  * @param fmt: error message. Supports formatting placeholders like %s
  * %i, etc.
