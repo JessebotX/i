@@ -1,11 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <string.h>
+#include <dirent.h>
+#include <sys/stat.h>
 #include <unistd.h>
 
 #define MOD_DIR   0777
 #define TITLE_MAX 255
 
+void walk_dir(char *root);
+void trim_trailing_slash(char path[]);
+int is_dir(const char *fpath);
 void error(char *fmt, ...);
 
 int main(int argc, char *argv[])
@@ -17,17 +23,78 @@ int main(int argc, char *argv[])
 		"pandoc", "-f", "markdown", "-t", "html", "./src/index.md", "-o", "./pub/index.html", NULL
 	};
 
-	/**
-	 * Ensure necessary directories exist.
-	 */
-	if (mkdir(output_html, MOD_DIR) != 0)
-	{
-		error("Failed to create %s. Make sure its parent dirname exists.", output_html);
-	}
-
-	execvp(converter[0], converter);
+	char path[] = "src/";
+	walk_dir(path);
 
 	return 0;
+}
+
+void walk_dir(char *basedir)
+{
+	DIR *dir;
+	struct dirent *ent = {0};
+	char entpath[1024] = "";
+
+	trim_trailing_slash(basedir);
+	dir = opendir(basedir);
+
+	if (dir == NULL)
+	{
+		error("Failed to walk directory \"%s\"", basedir);
+	}
+
+	while ((ent = readdir(dir)) != NULL)
+	{
+		if (strcmp(ent->d_name, ".") == 0 || strcmp(ent->d_name, "..") == 0)
+		{
+			continue;
+		}
+
+		entpath[0] = '\0';
+
+		strcat(entpath, basedir);
+		strcat(entpath, "/");
+		strcat(entpath, ent->d_name);
+
+		if (is_dir(entpath))
+		{
+			printf("%s/\n", entpath);
+			walk_dir(entpath);
+		}
+		else
+		{
+			printf("%s\n", entpath);
+		}
+	}
+
+	closedir(dir);
+}
+
+/**
+ * Check if path is a directory
+ *
+ * @param path: file/directory path string
+ */
+int is_dir(const char *path)
+{
+	struct stat s = {0};
+	stat(path, &s);
+	return S_ISDIR(s.st_mode);
+}
+
+/**
+ * Trim trailing slash if it exists, otherwise do nothing.
+ *
+ * @param path: directory path string
+ */
+void trim_trailing_slash(char path[])
+{
+	size_t last = strlen(path) - 1;
+
+	if (path[last] == '/' || path[last] == '\\')
+	{
+		path[last] = '\0';
+	}
 }
 
 /**
