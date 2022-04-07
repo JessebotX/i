@@ -23,8 +23,7 @@ int main(int argc, char *argv[])
 		"pandoc", "-f", "markdown", "-t", "html", "./src/index.md", "-o", "./pub/index.html", NULL
 	};
 
-	char path[] = "src/";
-	walk_dir(path);
+	walk_dir(input);
 
 	return 0;
 }
