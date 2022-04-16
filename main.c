@@ -34,21 +34,22 @@ void walk_dir(char *basedir)
 	struct dirent *ent = {0};
 	char entpath[1024] = "";
 
-	trim_trailing_slash(basedir);
-	dir = opendir(basedir);
+	trim_trailing_slash(basedir); // trim trailing slash if it exists
+	dir = opendir(basedir); // open directory
 
 	if (dir == NULL)
 	{
 		error("Failed to walk directory \"%s\"", basedir);
 	}
 
-	while ((ent = readdir(dir)) != NULL)
+	while ((ent = readdir(dir)) != NULL) // read directory
 	{
-		if (strcmp(ent->d_name, ".") == 0 || strcmp(ent->d_name, "..") == 0)
+		if (strcmp(ent->d_name, ".") == 0 || strcmp(ent->d_name, "..") == 0) // ignore the . and .. dirs
 		{
 			continue;
 		}
 
+		// empty out entpath
 		entpath[0] = '\0';
 
 		strcat(entpath, basedir);
